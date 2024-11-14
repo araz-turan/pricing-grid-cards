@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #151515;
+    font-family: 'Quicksand', sans-serif;
+}
+.para {
+    padding: 1.5rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #fff;
+}
+.cards {
+    display: flex;
+}
+.cards div {
+    margin: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+}
+.cards div::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: skewY(-3deg);
+    border: #444444 solid 0.1rem;
+    transition: background 300ms ease;
+    z-index: -1;
+}
+.cards div:hover::after {
+    background: #fff;
+    transition: background 300ms ease;
+}
+.cards div h3 {
+    color: #fff;
+    padding: 1rem 0;
+}
+.cards div:hover h3 {
+    color: #000;
+}
+.cards div h1 {
+    color: #F25F07;
+    padding: 0.5rem 0;
+}
+.cards div h4 {
+    color: #959595;
+    padding: 0.25rem 0 1.5rem 0;
+}
+.cards div:hover h4 {
+    color: #414141;
+}
+.cards div p {
+    color: #8a8a8a;
+    font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1.5rem;
+}
+.cards div:hover p {
+    color: #000;
+}
+.cards div button {
+    margin: 3rem 0 0.5rem 0;
+    width: 90%;
+    height: 1.75rem;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 800;
+    border: none;
+    background: #333333;
+    color: #fff;
+}
+.cards div:hover button {
+    background: #F25F07;
+    color: #fff;
+}
